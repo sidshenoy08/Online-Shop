@@ -1,0 +1,21 @@
+.base-container {
+    display: flex;
+}
+
+.image-div {
+    margin-left: 5vw;
+}
+
+.logo {
+    width: 30vw;
+}
+
+.form-div {
+    margin-top: 7.5vh;
+    margin-left: 15vw;
+}
+
+.form-input {
+    display: inline;
+    width: 15vw;
+}

@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg" style="margin-bottom: 5vh; background-color: #A5F1E9;">
+    <div class="container-fluid">
+      <a class="navbar-brand">SPDP</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/register">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="base-container">
+    <div class="image-div">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="logo" alt="Logo">
+    </div>
+    <div class="form-div">
+        <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input required type="text" #nameRef="ngModel" class="form-control form-input" style="margin-left: 9.3vw;" id="name" placeholder="Enter Name" name="name" ngModel>
+            </div>
+            <div *ngIf="nameRef.errors && nameRef.touched" class="alert alert-danger">
+                <div [hidden]="!nameRef.errors['required']">Please enter your name!</div>
+            </div>
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile Number</label>
+                <input required type="number" #mobileRef="ngModel" class="form-control form-input" style="margin-left: 5vw;" id="mobile" placeholder="Enter Mobile Number" name="mobile" ngModel>
+            </div>
+            <div *ngIf="mobileRef.errors && mobileRef.touched" class="alert alert-danger">
+                <div [hidden]="!mobileRef.errors['required']">Please enter your mobile number!</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email ID</label>
+                <input required type="email" #emailRef="ngModel" class="form-control form-input" style="margin-left: 8.3vw;" id="email" placeholder="Enter Email ID" name="email" ngModel>
+            </div>
+            <div *ngIf="emailRef.errors && emailRef.touched" class="alert alert-danger">
+                <div [hidden]="!emailRef.errors['required']">Please enter your email address!</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input required type="password" #passwordRef="ngModel" class="form-control form-input" style="margin-left: 7.8vw;" id="password" placeholder="Enter Password" name="password" ngModel>
+            </div>
+            <div *ngIf="passwordRef.errors && passwordRef.touched" class="alert alert-danger">
+                <div [hidden]="!passwordRef.errors['required']">Please enter a password!</div>
+            </div>
+            <div class="mb-3">
+                <label for="cpassword" class="form-label">Confirm Password</label>
+                <input required type="password" #cpasswordRef="ngModel" class="form-control form-input" style="margin-left: 4vw;" id="cpassword" placeholder="Confirm Password" name="cpassword" ngModel>
+            </div>
+            <div *ngIf="cpasswordRef.errors && cpasswordRef.touched" class="alert alert-danger">
+                <div [hidden]="!cpasswordRef.errors['required']">Please confirm your password!</div>
+            </div>  
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </form>
+    </div>
+</div>

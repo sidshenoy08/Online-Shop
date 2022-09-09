@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #A5F1E9;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SPDP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/users">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin-products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="onLogout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<br><br><br><br><br>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+<div class="section_our_solution">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="our_solution_category">
+        <div class="solution_cards_box">
+          <div class="solution_card">
+            <div class="hover_color_bubble"></div>
+            <div class="solu_title">
+              <h3>Products</h3>
+            </div>
+            <div class="solu_description">
+              <p>
+                Admin can view and delete existing products. 
+              </p>
+              <button type="button" class="read_more_btn" routerLink="/admin-products">Products</button>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="solution_cards_box sol_card_top_3">
+          <div class="solution_card">
+            <div class="hover_color_bubble"></div>
+            <div class="solu_title">
+              <h3>Users</h3>
+            </div>
+            <div class="solu_description">
+              <p>
+                Admin can view and delete existing users.
+              </p>
+              <button type="button" class="read_more_btn" routerLink="/users">Users</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

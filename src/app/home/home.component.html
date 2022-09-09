@@ -1,0 +1,134 @@
+<head>
+    
+  <link rel="stylesheet" href="./home.component.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="#">SPDP</a></div>
+    <div class="menu">
+      <a href="#">
+        
+      </a>
+
+      <ul>
+        <li><a style="margin-left: 10vw;" class="under" (click)="onLogout()">Logout</a></li>
+      </ul>
+    </div>
+    <form #searchForm="ngForm" (ngSubmit)="searchProducts(searchForm)">
+    <div class="input-group" style="width: 30vw;">
+      <input type="text" class="form-control" style="width: 0.5vw; height: 4vh; margin-top: 5vh;" name="product" placeholder="Search products" ngModel>
+      <span class="input-group-btn">
+        <button class="btn btn-info" type="submit">Search</button>
+      </span>
+    </div>
+    </form>
+    <div class="heading" style="margin-left: 25vw;">
+      <ul>
+        <li><a routerLink="" class="under" (click)="onLogout()">Logout</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      
+    </div>
+  </header>
+  <section class="container1">
+    <div class="section">
+      <div class="section1">
+        <div class="img-slider">
+          <img src="https://images.pexels.com/photos/6347888/pexels-photo-6347888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img">
+          <img src="https://images.pexels.com/photos/3962294/pexels-photo-3962294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img">
+          <img src="https://images.pexels.com/photos/2292953/pexels-photo-2292953.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" class="img">
+          <img src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img">
+          <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img">
+        </div>
+
+      </div>
+      <form #purchaseForm="ngForm" (ngSubmit)="onSubmit(purchaseForm)">
+      <div class="section2">
+        <div class="container">
+          <div class="items" *ngFor="let e of items">
+              <div class="img img1"><img src="{{e.src}}" alt=""></div>
+              <div class="name">{{e.name}}</div>
+              <div class="price">{{e.price}}</div>
+              <div class="info">Lorem ipsum dolor sit amet consectetur.</div>
+              <div class="qty">
+                  <label for="quantity">Quantity : </label>
+                  <input type="number" id="quantity" name="quantity" min="1" max="5" name="{{e.id}}" ngModel>
+                  </div>    
+          </div>
+      </div>
+      <button type="submit">Checkout</button>
+      </div>
+      </form>
+    </div>
+
+  </section>
+  <footer>
+    <div class="footer0">
+      <h1>SPDP</h1>
+    </div>
+    <div class="footer1 ">
+      Connect with us at<div class="social-media">
+        <a href="#">
+        </a>
+        <a href="#">
+        </a>
+        <a href="#">
+        </a>
+        <a href="#">
+        </a>
+        <a href="#">
+          
+        </a>
+      </div>
+    </div>
+    <div class="footer2">
+      <div class="product">
+        <div class="heading">Products</div>
+        <div class="div">Sell your Products</div>
+        <div class="div">Advertise</div>
+        <div class="div">Pricing</div>
+        <div class="div">Product Buisness</div>
+
+      </div>
+      <div class="services">
+        <div class="heading">Services</div>
+        <div class="div">Return</div>
+        <div class="div">Cash Back</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Others</div>
+      </div>
+      <div class="Company">
+        <div class="heading">Company</div>
+        <div class="div">Complaint</div>
+        <div class="div">Careers</div>
+        <div class="div">Affiliate Marketing</div>
+        <div class="div">Support</div>
+      </div>
+      <div class="Get Help">
+        <div class="heading">Get Help</div>
+        <div class="div">Help Center</div>
+        <div class="div">Privacy Policy</div>
+        <div class="div">Terms</div>
+        <div class="div">Login</div>
+      </div>
+    </div>
+    <div class="footer3">Copyright © <h4>SPDP</h4> 2021-2028</div>
+  </footer>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script>
+      const close = document.querySelector(".close");
+      const open = document.querySelector(".ham");
+      const menu = document.querySelector(".menu");
+      close.addEventListener("click", () => {
+      menu.style.visibility = "hidden";
+      });
+      open.addEventListener("click", () => {
+      menu.style.visibility = "visible";
+      });
+
+  </script>
+
+</body>

@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg" style="margin-bottom: 5vh; background-color: #A5F1E9;">
+    <div class="container-fluid">
+      <a class="navbar-brand">SPDP</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/register">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="base-container">
+    <div class="image-div">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="logo" alt="Logo">
+    </div>
+    <div class="form-div">
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email ID</label>
+                <input required type="email" #emailRef="ngModel" class="form-control form-input" style="margin-left: 8.3vw;" id="email" placeholder="Enter Email ID" name="email" ngModel>
+            </div>
+            <div *ngIf="emailRef.errors && emailRef.touched" class="alert alert-danger">
+                <div [hidden]="!emailRef.errors['required']">Please enter your email address!</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input required type="password" #passwordRef="ngModel" class="form-control form-input" style="margin-left: 7.8vw;" id="password" placeholder="Enter Password" name="password" ngModel>
+            </div>
+            <div *ngIf="passwordRef.errors && passwordRef.touched" class="alert alert-danger">
+                <div [hidden]="!passwordRef.errors['required']">Please enter your password!</div>
+            </div>
+            <div style="text-align: center; margin-top: 7.5vh;">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

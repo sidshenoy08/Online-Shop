@@ -1,0 +1,65 @@
+<head>
+
+    <link rel="stylesheet" href="./checkout.component.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header>
+      <div class="logo"><a href="#">SPDP</a></div>
+      <div class="menu">
+        <a href="#">
+          
+        </a>
+  
+        <ul>
+          <li><a href="#" class="under">HOME</a></li>
+          <li><a href="#" class="under">SHOP</a></li>
+          <li><a href="#" class="under">OUR PRODUCTS</a></li>
+          <li><a href="#" class="under">CONTACT US</a></li>
+          <li><a href="#" class="under">ABOUT US</a></li>
+        </ul>
+      </div>
+      <div class="search">
+  
+        <a href=""><input type="text" placeholder="search products" id="input">
+          
+        </a>
+      </div>
+      <div class="heading">
+        <ul>
+          <li><a style="margin-left: 10vw;" class="under" (click)="onLogout()">Logout</a></li>
+        </ul>
+      </div>
+      <div class="heading1">
+        
+      </div>
+    </header>
+
+    <div style="text-align: center; margin-top: 2.5vh; margin-bottom: 3vh;">
+        <h2>Checkout</h2>
+    </div>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Item Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="items" *ngFor="let e of data">
+                <td class="name">{{e.name}}</td>
+                <td class="price">{{e.price}}</td>
+                <td class="qty">{{e.qty}}</td> 
+                <td class="qty">${{e.total}}</td>  
+        </tr>    
+    </tbody>
+</table>
+<div style="text-align: center; margin-top: 10vh;">
+  <h4 style="display: inline;">Your total amount is:</h4>
+  <h3 style="display: inline;"> ${{sum}}</h3>
+  <h4>Thank you for shopping with us!</h4>
+</div>
+    </body>

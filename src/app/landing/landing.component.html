@@ -1,0 +1,39 @@
+
+<nav>
+    <a class="active">SPDP</a>
+    <a href="#user">User</a>
+    <a href="#vendor">Vendor</a>
+    <a href="#admin">Admin</a>
+  </nav>
+
+  <br id="user" />
+  <div id="user" class="card">
+    <div class="card-content">
+      <div class="card-title">
+        <h2>User</h2>
+        <div> While logging as a User you'll be able to view the products put out for sale by the vendors</div>
+      </div>
+      <button class="submit-btn" type="submit" routerLink="/login">Login</button>
+      <button id="register" class="submit-btn" type="submit" routerLink="/register">Register</button>
+    </div>
+  </div>
+  <br id="vendor" />
+  <div class="card">
+    <div class="card-content">
+      <div class="card-title">
+        <h2>Vendor</h2>
+        <div> While logging as a Vendor you'll be able to put out products for sale for the Users.</div>
+      </div>
+      <button class="submit-btn" type="submit" routerLink="/vendor-login">Login</button>
+    </div>
+  </div>
+  <br id="admin" />
+  <div class="card">
+    <div class="card-content">
+      <div class="card-title">
+        <h2>Admin</h2>
+        <div> While logging as a Admin you'll be able to modify the products, users and vendors</div>
+      </div>
+      <button class="submit-btn" type="submit" routerLink="admin-login">Login</button>
+    </div>
+  </div>
